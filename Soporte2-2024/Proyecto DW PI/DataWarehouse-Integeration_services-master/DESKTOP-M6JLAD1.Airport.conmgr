@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-M6JLAD1.Airport"
+  DTS:DTSID="{F2C95F41-E03D-4BF6-9CD2-E1D3E32DAC64}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=LAPTOP-58T8F6BP;Initial Catalog=Airport;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Airport-{F2C95F41-E03D-4BF6-9CD2-E1D3E32DAC64}DESKTOP-M6JLAD1.Airport;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

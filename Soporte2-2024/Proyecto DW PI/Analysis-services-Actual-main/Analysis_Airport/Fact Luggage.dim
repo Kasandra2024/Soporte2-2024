@@ -1,0 +1,161 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="64ef3139-2708-4919-9509-d43051dbe2ad" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Luggage</ID>
+  <Name>Fact Luggage</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ca0541d7-b4c2-45e8-80cb-3a98fb39e46a">
+    <DataSourceViewID>DSV_Airport</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="0e5c7689-22e0-45f4-84f0-e857265d0d29">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="5eafbde3-1d84-4a5e-9538-c26e5db657c7">
+      <ID>Id Luggage</ID>
+      <Name>Id Luggage</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a9dbce22-49e8-45bd-8c8e-8317a3cd99ff">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="62e306da-101d-451c-a3dc-48a9dfff8b1c">
+            <TableID>dbo_Fact_Luggage</TableID>
+            <ColumnID>id_luggage</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="308eef8f-03bf-4cfe-bcf3-31bf4d5eb8cc">
+          <AttributeID>Id Flight</AttributeID>
+          <Name>Id Flight</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1efbae24-1901-4786-bda4-9f1182984dc9">
+          <AttributeID>Id Ticket Category</AttributeID>
+          <Name>Id Ticket Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="23cda3ec-6f27-45a8-974a-d5e0accafe8e">
+          <AttributeID>Id Time</AttributeID>
+          <Name>Id Time</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d8abae62-1a04-469a-9317-a652f4ff09bf">
+          <AttributeID>Id Destination</AttributeID>
+          <Name>Id Destination</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2ff2c5e5-23ea-47a7-870b-5ad7c501d4cd">
+      <ID>Id Flight</ID>
+      <Name>Id Flight</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c4f51fc5-8763-44e8-8c8d-d52834926b6c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bf42b1ff-d30a-4b2c-9dbd-b01388f5b478">
+            <TableID>dbo_Fact_Luggage</TableID>
+            <ColumnID>id_flight</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c05b29c5-2d82-4a6a-8ccd-9d88ba0cb90f">
+      <ID>Id Ticket Category</ID>
+      <Name>Id Ticket Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0423f3aa-b792-40c3-8068-9b7ea693c083">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7b31a049-b80a-4227-ac38-9fe8a0140d6d">
+            <TableID>dbo_Fact_Luggage</TableID>
+            <ColumnID>id_Ticket_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6cd9c855-67d6-4fb9-839d-14ffc6818dd9">
+      <ID>Id Time</ID>
+      <Name>Id Time</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a6f9a9e9-4cad-47e5-b645-0daa9a11551f">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c15c09f1-e927-4bc3-ae2c-24e6fe9d01a5">
+            <TableID>dbo_Fact_Luggage</TableID>
+            <ColumnID>id_time</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4cf7b612-3a73-4c0e-a91a-5d6cc1e510a0">
+      <ID>Id Destination</ID>
+      <Name>Id Destination</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c952fdb4-95ff-4fae-9ba6-090d623ca4a8">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="146451a3-4f89-4cec-849b-8f8401039e4c">
+            <TableID>dbo_Fact_Luggage</TableID>
+            <ColumnID>id_destination</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

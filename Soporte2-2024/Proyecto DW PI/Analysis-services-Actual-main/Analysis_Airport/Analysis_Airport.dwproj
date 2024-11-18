@@ -1,0 +1,152 @@
+﻿<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <ProductVersion>16.0.20820.0</ProductVersion>
+  <SchemaVersion>9.0.2.10</SchemaVersion>
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkZGw1MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAiIHhtbG5zOmRkbDUwMF81MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAvNTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <Database>
+    <Name>Analysis_Airport.database</Name>
+    <FullPath>Analysis_Airport.database</FullPath>
+  </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>CUBE_Fact_flight.cube</Name>
+      <FullPath>CUBE_Fact_flight.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>CUBE_Fact_flight.partitions</Name>
+          <FullPath>CUBE_Fact_flight.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>CUBE_Booking.cube</Name>
+      <FullPath>CUBE_Booking.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>CUBE_Booking.partitions</Name>
+          <FullPath>CUBE_Booking.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>CUBE_Payment.cube</Name>
+      <FullPath>CUBE_Payment.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>CUBE_Payment.partitions</Name>
+          <FullPath>CUBE_Payment.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>CUBE_Luggage.cube</Name>
+      <FullPath>CUBE_Luggage.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>CUBE_Luggage.partitions</Name>
+          <FullPath>CUBE_Luggage.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>CUBE_AssginacionTripulantes.cube</Name>
+      <FullPath>CUBE_AssginacionTripulantes.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>CUBE_AssginacionTripulantes.partitions</Name>
+          <FullPath>CUBE_AssginacionTripulantes.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Status Flight.dim</Name>
+      <FullPath>Status Flight.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Destination.dim</Name>
+      <FullPath>Destination.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Type Flight.dim</Name>
+      <FullPath>Type Flight.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Airline.dim</Name>
+      <FullPath>Airline.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Time.dim</Name>
+      <FullPath>Time.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Airplane.dim</Name>
+      <FullPath>Airplane.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Payment Method.dim</Name>
+      <FullPath>Payment Method.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Status Booking.dim</Name>
+      <FullPath>Status Booking.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Customer.dim</Name>
+      <FullPath>Customer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Currency.dim</Name>
+      <FullPath>Currency.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Flight Dim.dim</Name>
+      <FullPath>Flight Dim.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Ticket Category.dim</Name>
+      <FullPath>Ticket Category.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fact Luggage.dim</Name>
+      <FullPath>Fact Luggage.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Roles.dim</Name>
+      <FullPath>Roles.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>DS_Airport.ds</Name>
+      <FullPath>DS_Airport.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>DSV_Airport.dsv</Name>
+      <FullPath>DSV_Airport.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>DS_Airport</Id>
+            <Name>DS_Airport</Name>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=LAPTOP-58T8F6BP;Password=;User ID=;Initial Catalog=Airport</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>DS_Airport</Id>
+            <Name>DS_Airport</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>
